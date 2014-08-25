@@ -1,0 +1,297 @@
+Turbo Dump  Version 5.0.16.12 Copyright (c) 1988, 2000 Inprise Corporation
+           Display of File DATABASE_ANALYSE_PROJECT.DLL
+
+Old Executable Header
+
+DOS File Size                                       3600h  ( 13824. )
+Load Image Size                                      210h  (   528. )
+Relocation Table entry count                          0000h  (     0. )
+Relocation Table address                              0040h  (    64. )
+Size of header record      (in paragraphs)            0004h  (     4. )
+Minimum Memory Requirement (in paragraphs)            000Fh  (    15. )
+Maximum Memory Requirement (in paragraphs)            FFFFh  ( 65535. )
+File load checksum                                    0000h  (     0. )
+Overlay Number                                        001Ah  (    26. )
+
+Initial Stack Segment  (SS:SP)			  0000:00B8
+Program Entry Point    (CS:IP)			  0000:0000
+
+
+Portable Executable (PE) File
+
+Header base: 00000200
+
+CPU type                 80386
+Flags                    210E [ executable backwards 32bit library ]
+DLL flags                0000 [ ]
+Linker Version           5.0
+Time stamp               45AB37A0 : Mon Jan 15 10:13:20 2007
+O/S Version              4.0
+User Version             0.0
+Subsystem Version        4.0
+Subsystem                0002 [ Windows GUI ]
+Object count             00000007
+Symbols offset           00000000
+Symbols count            00000000
+Optional header size     00E0
+Magic #                  10B
+Code size                00001000
+Init Data size           00001000
+Uninit Data size         00000000
+Entry RVA                00001128
+Image base               00400000
+Code base                00001000
+Data base                00002000
+Object/File align        00001000/00000200
+Reserved                 00000000
+Image size               00008000
+Header size              00000600
+Checksum                 00000000
+Stack reserve/commit     00000000/00000000
+Heap reserve/commit      00100000/00001000
+Number interesting RVAs  00000010
+Name                   RVA       Size  
+------------------  --------  --------
+Exports             00005000  0000007F
+Imports             00004000  00000FE5
+Resources           00006000  00000600
+Exceptions          00000000  00000000
+Security            00000000  00000000
+Fixups              00007000  00000240
+Debug               00000000  00000000
+Description         00000000  00000000
+Global Ptr          00000000  00000000
+TLS                 00000000  00000000
+Callbacks           00000000  00000000
+Bound Imports       00000000  00000000
+Import Addr Table   00000000  00000000
+Delayed Imports     00000000  00000000
+COM Runtime         00000000  00000000
+reserved            00000000  00000000
+
+Object table:
+#   Name      VirtSize    RVA     PhysSize  Phys off  Flags   
+--  --------  --------  --------  --------  --------  --------
+01  .text     00001000  00001000  00000E00  00000600  60000020 [CER]
+02  .data     00001000  00002000  00000400  00001400  C0000040 [IRW]
+03  .tls      00001000  00003000  00000200  00001800  C0000040 [IRW]
+04  .idata    00001000  00004000  00001000  00001A00  40000040 [IR]
+05  .edata    00001000  00005000  00000200  00002A00  40000040 [IR]
+06  .rsrc     00001000  00006000  00000600  00002C00  40000040 [IR]
+07  .reloc    00001000  00007000  00000400  00003200  50000040 [IRS]
+
+Key to section flags:
+  C - contains code
+  E - executable
+  I - contains initialized data
+  R - readable
+  S - shareable
+  W - writeable
+
+******************************************************************************
+Section:             Import
+  ImportLookUpTblRVA:000041CC
+  Time Stamp:        00000000
+  Forwarder Chain:   00000000 (index of first forwarder reference)
+
+Imports from rtl60.bpl
+                  __fastcall System::initialization()
+                  __fastcall System::Finalization()
+                  __fastcall System::UnregisterModule(System::TLibModule *)
+                  __fastcall System::RegisterModule(System::TLibModule *)
+                  __fastcall System::FindHInstance(void *)
+                  System::__linkproc__ __fastcall LStrFromPChar(System::AnsiString&, char *)
+                  System::__linkproc__ __fastcall LStrAsg(void *, const void *)
+                  System::__linkproc__ __fastcall LStrClr(void *)
+                  System::__linkproc__ __fastcall HandleFinally()
+                  __fastcall System::IsMemoryManagerSet()
+                  __fastcall System::SetMemoryManager(const System::TMemoryManager&)
+                  System::IsMultiThread
+                  System::IsConsole
+                  System::ExitProc
+                  System::CmdLine
+                  System::IsLibrary
+                  System::MainInstance
+
+Imports from rtl60.bpl
+                  __fastcall Types::initialization()
+                  __fastcall Types::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Sysconst::initialization()
+                  __fastcall Sysconst::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Sysutils::initialization()
+                  __fastcall Sysutils::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Varutils::initialization()
+                  __fastcall Varutils::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Variants::initialization()
+                  __fastcall Variants::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Rtlconsts::initialization()
+                  __fastcall Rtlconsts::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Typinfo::initialization()
+                  __fastcall Typinfo::Finalization()
+                  Typinfo::DotSep
+                  Typinfo::BooleanIdents
+
+Imports from rtl60.bpl
+                  __fastcall Activex::initialization()
+                  __fastcall Activex::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Classes::initialization()
+                  __fastcall Classes::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Comconst::initialization()
+                  __fastcall Comconst::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Comobj::initialization()
+                  __fastcall Comobj::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Math::initialization()
+                  __fastcall Math::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Dateutils::initialization()
+                  __fastcall Dateutils::Finalization()
+
+Imports from rtl60.bpl
+                  __fastcall Maskutils::initialization()
+                  __fastcall Maskutils::Finalization()
+
+Imports from dbrtl60.bpl
+                  __fastcall Dbconsts::initialization()
+                  __fastcall Dbconsts::Finalization()
+
+Imports from dbrtl60.bpl
+                  __fastcall Sqltimst::initialization()
+                  __fastcall Sqltimst::Finalization()
+
+Imports from dbrtl60.bpl
+                  __fastcall Fmtbcd::initialization()
+                  __fastcall Fmtbcd::Finalization()
+
+Imports from dbrtl60.bpl
+                  __fastcall Db::initialization()
+                  __fastcall Db::Finalization()
+                  __fastcall Db::TDataSet::Next()
+                  __fastcall Db::TDataSet::First()
+                  __fastcall Db::TDataSet::FieldByName(const System::AnsiString)
+                  __fastcall Db::TDataSet::Close()
+                  __fastcall Db::TDataSet::Open()
+
+Imports from BORLNDMM.DLL
+    (ord. =    2)
+
+Imports from KERNEL32.DLL
+                  FreeLibrary
+                  GetCommandLineA
+                  GetModuleHandleA
+                  GetProcAddress
+                  GetProcessHeap
+                  GetVersion
+                  HeapAlloc
+                  HeapFree
+                  LoadLibraryA
+
+Imports from CC3260MT.DLL
+                  operator delete(void *)
+                  _InitTermAndUnexPtrs()
+                  __ErrorExit
+                  __ErrorMessage
+                  ___CRTL_MEM_GetBorMemPtrs
+                  ___CRTL_MEM_UseBorMM
+                  ___CRTL_TLS_Alloc
+                  ___CRTL_TLS_ExitThread
+                  ___CRTL_TLS_Free
+                  ___CRTL_TLS_GetValue
+                  ___CRTL_TLS_InitThread
+                  ___CRTL_TLS_SetValue
+                  ____ExceptionHandler
+                  __argv_default_expand
+                  __free_heaps
+                  __handle_exitargv
+                  __handle_setargv
+                  __handle_wexitargv
+                  __handle_wsetargv
+                  __startupd
+                  __wargv_default_expand
+                  _memcpy
+                  _memset
+
+******************************************************************************
+Section:             Exports
+  Flags:             00000000
+  Time Stamp:        00000000
+  Major Version:     0000
+  Minor Version:     0000
+
+Exports from database_analyse_project.dll
+  2 exported name(s), 2 export addresse(s).  Ordinal base is 1.
+  Sorted by Name:
+    RVA      Ord. Hint Name
+    -------- ---- ---- ----
+    00001510    1 0000 _GetChannelsTypeCount
+    000020F8    2 0001 ___CPPdebugHook
+
+******************************************************************************
+Section:             Resources
+  Flags:             00000000
+  Time Stamp:        362F51AA : Thu Oct 22 18:39:22 1998
+  Major Version:     0000
+  Minor Version:     0000
+
+Resources:
+Type          Name                   Lang Id
+--------------------------------------------
+[0 named entries, 3 ID entries]
+type: Icon (3)  (next directory @00000028)
+
+              [0 named entries, 1 ID entries]
+              type: Cursor (1)  (next directory @00000070)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (1049)  (data @000000B8)
+                                         Offset:    00006108
+                                         Size:      000002E8
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: RCData (10)  (next directory @00000040)
+
+              [1 named entries, 0 ID entries]
+              DVCLAL  (next directory @00000088)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (0)  (data @000000C8)
+                                         Offset:    000063F0
+                                         Size:      00000010
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Group Icon (14)  (next directory @00000058)
+
+              [1 named entries, 0 ID entries]
+              MAINICON  (next directory @000000A0)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (1049)  (data @000000D8)
+                                         Offset:    00006400
+                                         Size:      00000014
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+
+

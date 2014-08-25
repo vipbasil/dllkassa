@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+
+<SKI>
+  <WINDOW_TENZO>
+    <PosX> 0 </PosX>
+    <PosY> 0 </PosY>
+    <Height> 100 </Height>
+    <Width> 100 </Width>
+  </WINDOW_TENZO>
+
+  <WINDOW_TEMPER>
+    <PosX> 0 </PosX>
+    <PosY> 0 </PosY>
+    <Height> 100 </Height>
+    <Width> 100 </Width>
+  </WINDOW_TENZO>
+</SKI>
