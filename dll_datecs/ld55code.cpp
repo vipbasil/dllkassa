@@ -3,6 +3,7 @@
 #include <vcl.h>
 #include <windows.h>
 #include "databaseunit.h"
+#include "mysqlunit.h"
 #include "ld55code.h"
 #include "sysvari.h"
 #pragma hdrstop

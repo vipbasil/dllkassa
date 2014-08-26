@@ -4,12 +4,12 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="..\datecsLD55.dll"/>
-    <OBJFILES value="..\..\..\TechProg\TechProg\database_anlyse\database_analyse.obj"/>
+    <OBJFILES value="ld55code.obj mysqlunit.obj"/>
     <RESFILES value="datecsLD55.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES)"/>
+    <RESDEPEN value="$(RESFILES) mysqlunit.dfm"/>
     <LIBFILES value="&quot;E:\Program Files\Borland\CBuilder6\Lib\memmgr.lib&quot;"/>
     <LIBRARIES value=""/>
     <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib bdertl.lib"/>
@@ -20,7 +20,7 @@
       inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
       bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
       indy.bpi bcb2kaxserver.bpi"/>
-    <PATHCPP value=".;..\..\..\TechProg\TechProg\database_anlyse"/>
+    <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -30,17 +30,16 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
     <MAINSOURCE value="datecsLD55.bpf"/>
-    <INCLUDEPATH value="..\..\..\TechProg\TechProg\database_anlyse;&quot;E:\Program Files\Borland\CBuilder6\Projects&quot;;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg"/>
-    <LIBPATH value="..\..\..\TechProg\TechProg\database_anlyse;&quot;E:\Program Files\Borland\CBuilder6\Projects&quot;;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include"/>
+    <LIBPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I..\..\..\TechProg\TechProg\database_anlyse 
-      -I&quot;E:\Program Files\Borland\CBuilder6\Projects&quot; 
-      -IE:\Projects\builder\TechProg\database_anlyse -I$(BCB)\include 
-      -I$(BCB)\include\vcl -IE:\Projects\builder\TechProg -src_suffix cpp 
-      -D_DEBUG -boa"/>
+    <IDLCFLAGS value="-I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
+      -I..\..\..\TechProg\TechProg\database_anlyse -I$(BCB)\include 
+      -I$(BCB)\include\vcl -IE:\projects\dllkassa\dllkassa\dll_datecs\include 
+      -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- 
       -tWD -tWM -c"/>
     <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
@@ -58,9 +57,10 @@
   <FILELIST>
       <FILE FILENAME="datecsLD55.res" FORMNAME="" UNITNAME="datecsLD55.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="datecsLD55.bpf" FORMNAME="" UNITNAME="datecsLD55" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="..\..\..\TechProg\TechProg\database_anlyse\database_analyse.cpp" FORMNAME="" UNITNAME="database_analyse" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ld55code.cpp" FORMNAME="" UNITNAME="ld55code" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="..\..\..\TechProg\TechProg\database_anlyse\database_analyse.h" FORMNAME="" UNITNAME="database_analyse.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="E:\Program Files\Borland\CBuilder6\Lib\memmgr.lib" FORMNAME="" UNITNAME="memmgr.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mysqlunit.cpp" FORMNAME="DataModule1" UNITNAME="mysqlunit" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
@@ -93,16 +93,23 @@ ProductName=
 ProductVersion=1.0.0.0
 Comments=
 
+[Excluded Packages]
+c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
 [HistoryLists\hlIncludePath]
-Count=3
-Item0=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
-Item1=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
-Item2=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl
+Count=5
+Item0=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include
+Item1=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
+Item2=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
+Item3=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
+Item4=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=2
-Item0=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
-Item1=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
+Count=4
+Item0=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql
+Item1=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
+Item2=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
+Item3=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
@@ -142,11 +149,6 @@ LinkCGLIB=0
 AddServerUnit=1
 AddClientUnit=1
 PrecompiledHeaders=1
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
 
 [Linker]
 LibPrefix=
