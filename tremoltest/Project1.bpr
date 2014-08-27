@@ -10,9 +10,9 @@
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) Unit1.dfm"/>
-    <LIBFILES value="D:\dw\zpfcom.lib"/>
-    <LIBRARIES value=""/>
-    <SPARELIBS value="vcl.lib rtl.lib"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="dclusr.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib dclusr.lib"/>
     <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
       vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
       teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
@@ -30,13 +30,13 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
     <MAINSOURCE value="Project1.cpp"/>
-    <INCLUDEPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="&quot;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6&quot;;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;E:\projects\dllkassa\dllkassa\tremoltest;&quot;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6&quot;;$(BCB)\lib\obj;$(BCB)\lib;&quot;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ C:\Program Files (x86)\ZekaFP\3.0\lib&quot;"/>
+    <INCLUDEPATH value="$(BCB)\Imports;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\Imports;&quot;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6&quot;;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;E:\projects\dllkassa\dllkassa\tremoltest;&quot;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6&quot;;$(BCB)\lib\obj;$(BCB)\lib;&quot;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ C:\Program Files (x86)\ZekaFP\3.0\lib&quot;"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
+    <IDLCFLAGS value="-I$(BCB)\Imports -I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
       -IE:\projects\dllkassa\dllkassa\tremoltest -I$(BCB)\include 
       -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
@@ -57,7 +57,6 @@
       <FILE FILENAME="Project1.res" FORMNAME="" UNITNAME="Project1.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Project1.cpp" FORMNAME="" UNITNAME="Project1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="D:\dw\zpfcom.lib" FORMNAME="" UNITNAME="zpfcom.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>

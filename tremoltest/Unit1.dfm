@@ -22,4 +22,10 @@ object Form1: TForm1
     TabOrder = 0
     OnClick = Button1Click
   end
+  object ZekaFP1: TZekaFP
+    AutoConnect = True
+    ConnectKind = ckRunningOrNew
+    Left = 224
+    Top = 32
+  end
 end
