@@ -32,13 +32,14 @@
 #pragma argsused
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
+  Application->CreateForm(__classid(Ttremolmodule), &tremolmodule);
   return 1;
 }
 //---------------------------------------------------------------------------
 
 int DLL_SPEC GetChannelsTypeCount(func_param_description *params)
 {
-  int count = 0;
+  /*int count = 0;
   params->table->Open();
   params->table->First();
 
@@ -53,13 +54,39 @@ int DLL_SPEC GetChannelsTypeCount(func_param_description *params)
     count += params->param1[i] ? 1 : 0;
 
   params->result = count;
+    */
+  return 0;
+}
+//---------------------------------------------------------------------------
+
+int DLL_SPEC PrintBon(void)
+{
+WORD wCom = 1;
+DWORD baud = 9600;
+tremolmodule->tremol->Setup(wCom,baud,2,10);// zfp(wCom, baud)
+tremolmodule->tremol->Connect();
+//OpenFiscalBon
+AnsiString pswd="0000";
+wchar_t* wpswd;
+wpswd=pswd.WideChar(wpswd,pswd.Length());
+
+WideString text="lapte";
+/*wchar_t* wtext,wtextdest;
+int buffsize=text.WideCharBufSize();
+wtext=text.WideChar(wtext,buffsize);*/
+//ZekaFP1->printLogo();
+tremolmodule->tremol->OpenFiscalBon(1,wpswd,0,0);
+tremolmodule->tremol->SellFree(text, 0, 5.50f, 10.000f,-10);
+tremolmodule->tremol->PrintText(text,0);
+
+tremolmodule->tremol->Payment(500,1,0)  ;
+tremolmodule->tremol->CloseFiscalBon();
 
   return 0;
 }
-
 int DLL_SPEC GetChannelsCountOfSomeType(func_param_description *params)
 {
-  params->table->Open();
+ /* params->table->Open();
   params->table->First();
 
   int count = 0;
@@ -75,13 +102,13 @@ int DLL_SPEC GetChannelsCountOfSomeType(func_param_description *params)
   params->table->Close();
 
   params->result = count;
-
+   */
   return 0;
 }
 
 int DLL_SPEC GetChannelsDataOfSomeType(func_param_description *params)
 {
-  int count = 0;
+ /* int count = 0;
   params->table->Open();
   params->table->First();
   Variant var;
@@ -105,7 +132,7 @@ int DLL_SPEC GetChannelsDataOfSomeType(func_param_description *params)
   params->table->Close();
 
   params->result = 1;
-
+           */
   return 0;
 }
 

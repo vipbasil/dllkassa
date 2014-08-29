@@ -30,7 +30,7 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
     <MAINSOURCE value="Project1.cpp"/>
-    <INCLUDEPATH value="$(BCB)\Imports;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl"/>
+    <INCLUDEPATH value="$(BCB)\Imports;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs"/>
     <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\Imports;&quot;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6&quot;;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;E:\projects\dllkassa\dllkassa\tremoltest;&quot;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6&quot;;$(BCB)\lib\obj;$(BCB)\lib;&quot;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ C:\Program Files (x86)\ZekaFP\3.0\lib&quot;"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
@@ -38,7 +38,8 @@
   <OPTIONS>
     <IDLCFLAGS value="-I$(BCB)\Imports -I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
       -IE:\projects\dllkassa\dllkassa\tremoltest -I$(BCB)\include 
-      -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
+      -I$(BCB)\include\vcl -IE:\projects\dllkassa\dllkassa\dll_datecs 
+      -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
       -tW -tWM"/>
     <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
@@ -93,13 +94,16 @@ Comments=
 c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
 
 [HistoryLists\hlIncludePath]
-Count=1
-Item0=C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl
+Count=3
+Item0=$(BCB)\Imports;C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs
+Item1=$(BCB)\Imports;C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl
+Item2=C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=2
-Item0=C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6;C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ C:\Program Files (x86)\ZekaFP\3.0\lib
-Item1=C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6;C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6;$(BCB)\lib\obj;$(BCB)\lib
+Count=3
+Item0=$(BCB)\Projects\Lib;$(BCB)\Imports;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6;C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ C:\Program Files (x86)\ZekaFP\3.0\lib
+Item1=C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6;C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ C:\Program Files (x86)\ZekaFP\3.0\lib
+Item2=C:\Program Files (x86)\ComponentAce\ZipForge\Lib\C++ Builder 6;C:\Program Files (x86)\Borland\CBuilder6\Bin;E:\projects\dllkassa\dllkassa\tremoltest;..\..\..\ComponentAce\ZipForge\Lib\C++ Builder 6;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

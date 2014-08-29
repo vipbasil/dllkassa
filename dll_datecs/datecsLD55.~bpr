@@ -3,13 +3,13 @@
 <PROJECT>
   <MACROS>
     <VERSION value="BCB.06.00"/>
-    <PROJECT value="output\datecsLD55.dll"/>
-    <OBJFILES value="ld55code.obj mysqlunit.obj"/>
+    <PROJECT value="E:\projects\dllkassa\dllkassa\tremoltest\datecsLD55.dll"/>
+    <OBJFILES value="ld55code.obj mysqlunit.obj tremol.obj"/>
     <RESFILES value="datecsLD55.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) mysqlunit.dfm"/>
+    <RESDEPEN value="$(RESFILES) mysqlunit.dfm tremol.dfm"/>
     <LIBFILES value="&quot;E:\Program Files\Borland\CBuilder6\Lib\memmgr.lib&quot;"/>
     <LIBRARIES value="dclusr.lib"/>
     <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib bdertl.lib dclusr.lib"/>
@@ -44,7 +44,7 @@
       -tWD -tWM -c"/>
     <PFLAGS value="-$YD -$W -$O- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/mx /w2 /zd"/>
+    <AFLAGS value="/mx /w2 /zi"/>
     <LFLAGS value="-D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
     <OTHERFILES value=""/>
   </OPTIONS>
@@ -61,6 +61,7 @@
       <FILE FILENAME="..\..\..\TechProg\TechProg\database_anlyse\database_analyse.h" FORMNAME="" UNITNAME="database_analyse.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="E:\Program Files\Borland\CBuilder6\Lib\memmgr.lib" FORMNAME="" UNITNAME="memmgr.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="mysqlunit.cpp" FORMNAME="DataModule1" UNITNAME="mysqlunit" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
+      <FILE FILENAME="tremol.cpp" FORMNAME="tremolmodule" UNITNAME="tremol" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
@@ -97,19 +98,21 @@ Comments=
 c:\program files (x86)\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
 
 [HistoryLists\hlIncludePath]
-Count=5
-Item0=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include
-Item1=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
-Item2=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
-Item3=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
-Item4=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl
+Count=6
+Item0=$(BCB)\Imports;C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include
+Item1=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include
+Item2=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
+Item3=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
+Item4=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\Projects\builder\TechProg
+Item5=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=4
-Item0=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql
-Item1=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
-Item2=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
-Item3=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
+Count=5
+Item0=$(BCB)\Projects\Lib;$(BCB)\Imports;C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql
+Item1=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql
+Item2=C:\Program Files (x86)\Borland\CBuilder6\Bin;..\..\..\TechProg\TechProg\database_anlyse;E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
+Item3=E:\Program Files\Borland\CBuilder6\Projects;E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
+Item4=E:\Projects\builder\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
@@ -120,11 +123,14 @@ Count=1
 Item0=_DEBUG
 
 [HistoryLists\hlFinalOutputDir]
-Count=4
-Item0=output
-Item1=..\
-Item2=E:\Projects\builder\TechProg\
-Item3=E:\Projects\builder\TechProg
+Count=7
+Item0=E:\projects\dllkassa\dllkassa\tremoltest\
+Item1=E:\projects\dllkassa\dllkassa\tremoltest
+Item2=output\
+Item3=output
+Item4=..\
+Item5=E:\Projects\builder\TechProg\
+Item6=E:\Projects\builder\TechProg
 
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl
@@ -134,7 +140,7 @@ RunParams=
 Launcher=
 UseLauncher=0
 DebugCWD=
-HostApplication=E:\Projects\builder\TechProg\TechProg.exe
+HostApplication=E:\projects\dllkassa\dllkassa\tremoltest\Project1.exe
 RemoteHost=
 RemotePath=
 RemoteLauncher=

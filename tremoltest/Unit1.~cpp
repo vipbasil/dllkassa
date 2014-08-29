@@ -15,6 +15,8 @@ __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
  //ZekaFP1->
+
+
 }
 //---------------------------------------------------------------------------
 
@@ -37,14 +39,14 @@ AnsiString pswd="0000";
 wchar_t* wpswd;
 wpswd=pswd.WideChar(wpswd,pswd.Length());
 
-AnsiString text="lapte";
-wchar_t* wtext,wtextdest;
+WideString text="lapte";
+/*wchar_t* wtext,wtextdest;
 int buffsize=text.WideCharBufSize();
-wtext=text.WideChar(wtext,buffsize);
+wtext=text.WideChar(wtext,buffsize);*/
 //ZekaFP1->printLogo();
 ZekaFP1->OpenFiscalBon(1,wpswd,0,0);
-ZekaFP1->SellFree(wtext, 0, 5.50f, 10.000f,-10);
-ZekaFP1->PrintText(wtext,0);
+ZekaFP1->SellFree(text, 0, 5.50f, 10.000f,-10);
+ZekaFP1->PrintText(text,0);
 
 ZekaFP1->Payment(500,1,0)  ;
 ZekaFP1->CloseFiscalBon();
@@ -62,6 +64,28 @@ ZekaFP1->Connect();
 ZekaFP1->ReportDaily(1,0);
 ZekaFP1->Disconnect();
 
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+ HINSTANCE lib = LoadLibrary("datecsLD55.dll");
+ if(lib)
+  {
+		PrintBon = (FType *)GetProcAddress(lib,"_PrintBon");
+    if(PrintBon)
+    {
+      PrintBon();
+
+    }
+    else
+    {
+      FreeLibrary(lib);
+    	PrintBon = NULL;
+      return;
+    }
+
+  }
 }
 //---------------------------------------------------------------------------
 

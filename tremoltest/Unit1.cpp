@@ -15,6 +15,8 @@ __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
  //ZekaFP1->
+
+
 }
 //---------------------------------------------------------------------------
 
@@ -62,6 +64,28 @@ ZekaFP1->Connect();
 ZekaFP1->ReportDaily(1,0);
 ZekaFP1->Disconnect();
 
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+ HINSTANCE lib = LoadLibrary("datecsLD55.dll");
+ if(lib)
+  {
+		PrintBon = (FType *)GetProcAddress(lib,"_PrintBon");
+    if(PrintBon)
+    {
+      PrintBon();
+
+    }
+    else
+    {
+      FreeLibrary(lib);
+    	PrintBon = NULL;
+      return;
+    }
+
+  }
 }
 //---------------------------------------------------------------------------
 

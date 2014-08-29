@@ -11,7 +11,7 @@
 
 //TTable* - таблица с которой необходимо получить количество параметров
 //int* - массив размерностью MAX_TYPE_COUNT для получения присутствующих типов
-extern "C" int DLL_SPEC PrintBon(void);
+extern "C" int DLL_SPEC BonPrint(void);
 //TTable* - таблица с которой необходимо получить количество параметров
 //int* - массив размерностью MAX_TYPE_COUNT для получения присутствующих типов
 extern "C" int DLL_SPEC GetChannelsTypeCount(func_param_description*);
