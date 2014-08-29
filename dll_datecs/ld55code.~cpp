@@ -32,6 +32,7 @@
 #pragma argsused
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
+  Application->CreateForm(__classid(Ttremolmodule), &tremolmodule);
   return 1;
 }
 //---------------------------------------------------------------------------
@@ -65,9 +66,8 @@ DWORD baud = 9600;
 tremolmodule->tremol->Setup(wCom,baud,2,10);// zfp(wCom, baud)
 tremolmodule->tremol->Connect();
 //OpenFiscalBon
-AnsiString pswd="0000";
-wchar_t* wpswd;
-wpswd=pswd.WideChar(wpswd,pswd.Length());
+WideString  pswd="0000";
+
 
 WideString text="lapte";
 /*wchar_t* wtext,wtextdest;

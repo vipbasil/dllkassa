@@ -66,16 +66,15 @@ DWORD baud = 9600;
 tremolmodule->tremol->Setup(wCom,baud,2,10);// zfp(wCom, baud)
 tremolmodule->tremol->Connect();
 //OpenFiscalBon
-AnsiString pswd="0000";
-wchar_t* wpswd;
-wpswd=pswd.WideChar(wpswd,pswd.Length());
+WideString  pswd="0000";
+
 
 WideString text="lapte";
 /*wchar_t* wtext,wtextdest;
 int buffsize=text.WideCharBufSize();
 wtext=text.WideChar(wtext,buffsize);*/
 //ZekaFP1->printLogo();
-tremolmodule->tremol->OpenFiscalBon(1,wpswd,0,0);
+tremolmodule->tremol->OpenFiscalBon(1,pswd,0,0);
 tremolmodule->tremol->SellFree(text, 0, 5.50f, 10.000f,-10);
 tremolmodule->tremol->PrintText(text,0);
 
