@@ -8,7 +8,9 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include "mysql.h"
-#include "map.h";
+#include "map.h"
+#include "ZFPCOMLib_OCX.h"
+#include <OleServer.hpp>;
 //---------------------------------------------------------------------------
 class TDataModule1 : public TDataModule
 {

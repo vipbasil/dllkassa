@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef Unit1H
-#define Unit1H
+#ifndef tremolH
+#define tremolH
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -10,19 +10,15 @@
 #include "ZFPCOMLib_OCX.h"
 #include <OleServer.hpp>
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class Ttremolmodule : public TDataModule
 {
 __published:	// IDE-managed Components
-        TButton *Button1;
-        TZekaFP *ZekaFP1;
-        TButton *Button2;
-        void __fastcall Button1Click(TObject *Sender);
-        void __fastcall Button2Click(TObject *Sender);
+        TZekaFP *tremol;
 private:	// User declarations
 public:		// User declarations
-        __fastcall TForm1(TComponent* Owner);
+        __fastcall Ttremolmodule(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE Ttremolmodule *tremolmodule;
 //---------------------------------------------------------------------------
 #endif

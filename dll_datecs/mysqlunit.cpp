@@ -6,6 +6,7 @@
 #include "mysqlunit.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
+#pragma link "ZFPCOMLib_OCX"
 #pragma resource "*.dfm"
 TDataModule1 *DataModule1;
 //---------------------------------------------------------------------------

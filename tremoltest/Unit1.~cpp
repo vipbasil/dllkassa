@@ -43,7 +43,7 @@ int buffsize=text.WideCharBufSize();
 wtext=text.WideChar(wtext,buffsize);
 //ZekaFP1->printLogo();
 ZekaFP1->OpenFiscalBon(1,wpswd,0,0);
-ZekaFP1->SellFree(wtext, 0, 0.54f, 10.372f,10);
+ZekaFP1->SellFree(wtext, 0, 5.50f, 10.000f,-10);
 ZekaFP1->PrintText(wtext,0);
 
 ZekaFP1->Payment(500,1,0)  ;
@@ -53,3 +53,15 @@ ZekaFP1->CloseFiscalBon();
 
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+   WORD wCom = 1;
+DWORD baud = 9600;
+ZekaFP1->Setup(wCom,baud,2,10);// zfp(wCom, baud)
+ZekaFP1->Connect();
+ZekaFP1->ReportDaily(1,0);
+ZekaFP1->Disconnect();
+
+}
+//---------------------------------------------------------------------------
+

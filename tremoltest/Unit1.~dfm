@@ -22,6 +22,15 @@ object Form1: TForm1
     TabOrder = 0
     OnClick = Button1Click
   end
+  object Button2: TButton
+    Left = 152
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 1
+    OnClick = Button2Click
+  end
   object ZekaFP1: TZekaFP
     AutoConnect = True
     ConnectKind = ckRunningOrNew

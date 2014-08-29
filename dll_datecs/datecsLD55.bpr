@@ -4,15 +4,15 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="output\datecsLD55.dll"/>
-    <OBJFILES value="ld55code.obj mysqlunit.obj"/>
+    <OBJFILES value="ld55code.obj mysqlunit.obj tremol.obj"/>
     <RESFILES value="datecsLD55.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) mysqlunit.dfm"/>
+    <RESDEPEN value="$(RESFILES) mysqlunit.dfm tremol.dfm"/>
     <LIBFILES value="&quot;E:\Program Files\Borland\CBuilder6\Lib\memmgr.lib&quot;"/>
-    <LIBRARIES value=""/>
-    <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib bdertl.lib"/>
+    <LIBRARIES value="dclusr.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib bdertl.lib dclusr.lib"/>
     <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
       vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
       teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
@@ -30,13 +30,13 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
     <MAINSOURCE value="datecsLD55.bpf"/>
-    <INCLUDEPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include"/>
-    <LIBPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql"/>
+    <INCLUDEPATH value="$(BCB)\Imports;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\Imports;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
+    <IDLCFLAGS value="-I$(BCB)\Imports -I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
       -I..\..\..\TechProg\TechProg\database_anlyse -I$(BCB)\include 
       -I$(BCB)\include\vcl -IE:\projects\dllkassa\dllkassa\dll_datecs\include 
       -src_suffix cpp -D_DEBUG -boa"/>
@@ -61,6 +61,7 @@
       <FILE FILENAME="..\..\..\TechProg\TechProg\database_anlyse\database_analyse.h" FORMNAME="" UNITNAME="database_analyse.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="E:\Program Files\Borland\CBuilder6\Lib\memmgr.lib" FORMNAME="" UNITNAME="memmgr.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="mysqlunit.cpp" FORMNAME="DataModule1" UNITNAME="mysqlunit" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
+      <FILE FILENAME="tremol.cpp" FORMNAME="tremolmodule" UNITNAME="tremol" CONTAINERID="CCompiler" DESIGNCLASS="TDataModule" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>

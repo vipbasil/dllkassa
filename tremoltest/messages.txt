@@ -1,0 +1,3 @@
+[C++ Error] Unit1.cpp(35): E2034 Cannot convert 'char *' to 'wchar_t *'
+[C++ Error] Unit1.cpp(35): E2342 Type mismatch in parameter 'name' (wanted 'wchar_t *', got 'char *')
+[C++ Error] Unit1.cpp(35): E2193 Too few parameters in call to '_fastcall TZekaFP::SellFree(wchar_t *,unsigned char,double,double,double)'

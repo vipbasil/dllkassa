@@ -1,13 +1,13 @@
-object DataModule1: TDataModule1
+object tremolmodule: Ttremolmodule
   OldCreateOrder = False
-  Left = 296
-  Top = 120
+  Left = 192
+  Top = 124
   Height = 150
   Width = 215
   object tremol: TZekaFP
     AutoConnect = False
     ConnectKind = ckRunningOrNew
-    Left = 16
-    Top = 16
+    Left = 72
+    Top = 32
   end
 end

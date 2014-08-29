@@ -3,7 +3,7 @@
 <PROJECT>
   <MACROS>
     <VERSION value="BCB.06.00"/>
-    <PROJECT value="..\datecsLD55.dll"/>
+    <PROJECT value="output\datecsLD55.dll"/>
     <OBJFILES value="ld55code.obj mysqlunit.obj"/>
     <RESFILES value="datecsLD55.res"/>
     <IDLFILES value=""/>
@@ -11,8 +11,8 @@
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) mysqlunit.dfm"/>
     <LIBFILES value="&quot;E:\Program Files\Borland\CBuilder6\Lib\memmgr.lib&quot;"/>
-    <LIBRARIES value=""/>
-    <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib bdertl.lib"/>
+    <LIBRARIES value="dclusr.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib dbrtl.lib bdertl.lib dclusr.lib"/>
     <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
       vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
       teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
@@ -30,13 +30,13 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
     <MAINSOURCE value="datecsLD55.bpf"/>
-    <INCLUDEPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include"/>
-    <LIBPATH value="&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql"/>
+    <INCLUDEPATH value="$(BCB)\Imports;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\include;$(BCB)\include\vcl;E:\projects\dllkassa\dllkassa\dll_datecs\include"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\Imports;&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot;;..\..\..\TechProg\TechProg\database_anlyse;$(BCB)\lib\obj;$(BCB)\lib;E:\projects\dllkassa\dllkassa\dll_datecs\include\mysql"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
+    <IDLCFLAGS value="-I$(BCB)\Imports -I&quot;C:\Program Files (x86)\Borland\CBuilder6\Bin&quot; 
       -I..\..\..\TechProg\TechProg\database_anlyse -I$(BCB)\include 
       -I$(BCB)\include\vcl -IE:\projects\dllkassa\dllkassa\dll_datecs\include 
       -src_suffix cpp -D_DEBUG -boa"/>
@@ -120,10 +120,11 @@ Count=1
 Item0=_DEBUG
 
 [HistoryLists\hlFinalOutputDir]
-Count=3
-Item0=..\
-Item1=E:\Projects\builder\TechProg\
-Item2=E:\Projects\builder\TechProg
+Count=4
+Item0=output
+Item1=..\
+Item2=E:\Projects\builder\TechProg\
+Item3=E:\Projects\builder\TechProg
 
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl
